@@ -7,7 +7,6 @@ body {
 
     margin: 0;
     min-height: 100vh;
-    /* font-family: Roboto; */
 }
 
 .header {
@@ -28,11 +27,6 @@ body {
 }
 
 .freerooms-logo-container {
-    /* text-align: center;
-    vertical-align: middle;
-    line-height: 40px; */
-    /* justify-content: center; */
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,8 +46,75 @@ body {
     margin: 3px;
 }
 
-.filters-container {
+.search-header {
+    display: flex;
 
+    padding: 16px 16px;
+}
+
+.filters-container {
+    flex: 0 0 auto;
+    width: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px;
+    color: darkorange;
+    font-weight: bold;
+
+    border: 2px solid darkorange;
+    border-radius: 10px;
+
+    background-color: #F9FaF8;
+
+    margin: 0px 100px 0px 0px;
+}
+
+.search-bar {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 4px;
+    
+    padding: 0px 16px;
+}
+
+.search-bar-icon {
+    flex: 0 0 30px;
+
+    margin: 0px 12px 0px 0px;
+}
+
+.search-input {
+    flex: 1;
+
+    border-width: 0px;
+}
+
+.sort-container {
+    flex: 0 0 auto;
+    width: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px;
+    color: darkorange;
+    font-weight: bold;
+
+    border: 2px solid darkorange;
+    border-radius: 10px;
+
+    background-color: #F9FaF8;
+
+    margin: 0px 0px 0px 100px;
 }
 
 .body {
