@@ -1,6 +1,7 @@
+let buildings =
 [
     {
-      "name": "AGSM", 
+      "name": "AGSM",
       "rooms_available": 9,
       "building_picture": "./agsm.webp"
     },
@@ -49,4 +50,29 @@
       "rooms_available": 7,
       "building_picture": "./cseBuilding.webp"
     }
-  ]
+]
+
+let mainBody = document.getElementById('main-body');
+
+for (let building of buildings) {
+    let buildingObject = document.createElement('div');
+
+    let name = building.name;
+    let roomsAvailable = building.rooms_available;
+    let imagePath = '../assets' + building.building_picture.substring(1);
+
+    buildingObject.innerHTML = `
+        <img src="${imagePath}" alt="${name} image">
+            <div class="overlay rooms-avaliable">
+                <span class="avaliable-icon"></span>
+                ${roomsAvailable} rooms avaliable
+            </div>
+        <div class="overlay building-name">${name}</div>
+    `
+    
+    buildingObject.className = 'building-container';
+        
+    console.log(mainBody.innerHTML);
+
+    mainBody.appendChild(buildingObject);
+}

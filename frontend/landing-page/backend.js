@@ -1,4 +1,4 @@
-  const logoContainer = document.getElementById('freerooms-logo-container');
+const logoContainer = document.getElementById('freerooms-logo-container');
 const logoImg = document.getElementById('door-logo')
 
 let clickCounter = 0;

@@ -124,7 +124,7 @@ body {
     flex-direction: column;
 }
 
-.main-body {
+#main-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 22px;
