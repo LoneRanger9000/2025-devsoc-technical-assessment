@@ -125,16 +125,21 @@ body {
 }
 
 .main-body {
-    /*  */
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 0px 10px;
 }
 
 .building-container {
     position: relative;
-    width: 220px;
-    height: 220px;
+    min-width: 300px;
+    height: 300px;
     overflow: hidden;
 
+    margin: 6px;
     border-radius: 10px;
+    flex: 1;
 
     font-family: arial;
 }
