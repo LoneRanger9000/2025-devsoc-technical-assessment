@@ -19,7 +19,7 @@ body {
   
     padding: 4px 16px;
 
-    background-color: #F9FaF8;
+    background-color: white;
 
     border-width: 0px 0px 1px 0px;
     border-color: rgb(209, 209, 209);
@@ -67,7 +67,7 @@ body {
     border: 2px solid darkorange;
     border-radius: 10px;
 
-    background-color: #F9FaF8;
+    background-color: white;
 
     margin: 0px 100px 0px 0px;
 }
@@ -112,7 +112,7 @@ body {
     border: 2px solid darkorange;
     border-radius: 10px;
 
-    background-color: #F9FaF8;
+    background-color: white;
 
     margin: 0px 0px 0px 100px;
 }
@@ -127,7 +127,7 @@ body {
 .main-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 12px;
+    gap: 22px;
 
     padding: 0px 10px 10px 10px;
 }
@@ -196,19 +196,3 @@ body {
 
     padding: 10px 10px;
 }
-
-.footer {
-    background-color: #1F2937;
-    color: #F9FaF8;
-  
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  
-    flex-grow: 0;
-    flex-shrink: 0;
-    
-    height: 40px;
-}
-  
