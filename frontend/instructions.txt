@@ -1,0 +1,7 @@
+In order to run, just cd into landing-page, and then run "explorer.exe index.html".
+Note that no 'npm i' 'npm run start' is needed, and no frameworks were used.
+
+Further note that I only tested this on WSL. I have no idea how differently it works on mac/regular windows
+
+PS. All stretch tasks were completed. 
+PSS. The building info is loaded from a json variable (can't use a json file) to simulate how a real website will do it
