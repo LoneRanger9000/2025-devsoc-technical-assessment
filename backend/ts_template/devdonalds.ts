@@ -26,7 +26,7 @@ const app = express();
 app.use(express.json());
 
 // Store your recipes here!
-const cookbook: any = null;
+const cookbook: (recipe | ingredient)[] = [];
 
 // Task 1 helper (don't touch)
 app.post("/parse", (req:Request, res:Response) => {
@@ -62,9 +62,37 @@ const parse_handwriting = (recipeName: string): string | null => {
 // [TASK 2] ====================================================================
 // Endpoint that adds a CookbookEntry to your magical cookbook
 app.post("/entry", (req:Request, res:Response) => {
-  // TODO: implement me
-  res.status(500).send("not yet implemented!")
+  const input = req.body;
 
+  const type = input.type;
+  const name = input.name;
+
+  if (type !== "recipe" && type !== "ingredient")
+    return res.status(400).json({ error: "type can only be \"recipe\" or \"ingredient\""});
+
+  // Returning error if entry name was seen before
+  for (let i = 0; i < cookbook.length; i++) {
+    if (cookbook[i].name === name)
+      return res.status(400).json({ error: "entry names must be unique"});
+  }
+
+  // Returning error if recipe has negative cook time
+  switch(type) {
+    case "recipe":
+      for (let requiredItem of input.requiredItems)
+        if (requiredItem.cookTime < 0)
+          return res.status(400).json({ error: "cookTime can only be greater than or equal to 0"});
+      break;
+    case "ingredient":
+      if (input.cookTime < 0)
+        return res.status(400).json({ error: "cookTime can only be greater than or equal to 0"});
+      break;
+    default:
+  }
+
+  // Storing the new recipe/ingredient and sending a successful code
+  cookbook.push(input);
+  res.status(200).json({});
 });
 
 // [TASK 3] ====================================================================
